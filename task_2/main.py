@@ -27,7 +27,8 @@ import re
 from typing import Callable, Generator
 
 def generator_numbers(text: str) -> Generator[float, None, None]:
-    # 
+    # Регулярний вирази для ідентифікації дійсних чисел відокремлених пробілами
+    pattern = r"\s\d+\.\d+\s"
     # Знаходимо всі збіги шаблону в тексті
     numbers = re.findall(pattern, text)
     # Перетворюємо кожен знайдений елемент на float і повертаємо через yield
